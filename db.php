@@ -1,11 +1,8 @@
 <?php
-$host = "localhost";
-$user = "root";
-$password = "";
-$dbname = "login_db";
+// Basic MySQL connection
+$conn = mysqli_connect("localhost", "root", "", "crud_db");
 
-$conn = mysqli_connect($host, $user, $password, $dbname);
-
+// Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
